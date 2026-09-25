@@ -1,10 +1,10 @@
 cask "layout" do
-  version "0.1.0"
-  sha256 "c861b60fb24eb0ef74e3c43115573c84d6c9c2f2b45b8f75862e360ec8ae49a9"
+  version "0.1.1"
+  sha256 "901d662a43c7ea1c0d35429d4ea0af5ccdd5321c02e12b1ddb50ab1bbee9a902"
 
   # The repository is private: the asset comes from the GitHub API, with the credentials Homebrew
   # already uses (HOMEBREW_GITHUB_API_TOKEN, otherwise the gh login).
-  url "https://api.github.com/repos/EQuimper/Layout/releases/assets/586740099",
+  url "https://api.github.com/repos/EQuimper/Layout/releases/assets/588132680",
       header: [
         "Accept: application/octet-stream",
         "Authorization: Bearer #{GitHub::API.credentials}",
