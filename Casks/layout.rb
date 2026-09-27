@@ -1,6 +1,6 @@
 cask "layout" do
-  version "0.3.0"
-  sha256 "b67a42ec72d7e1b426a97fab2bed04777217e48898c84f6a1db7628ae0027b81"
+  version "0.3.1"
+  sha256 "db036aa20a203ec868b00b3c4942a1a4d62926e0b469389c89187166e3299977"
 
   url "https://download.getlayout.app/Layout-#{version}.zip"
   name "Layout"
@@ -12,6 +12,7 @@ cask "layout" do
   depends_on macos: :sonoma
 
   app "Layout.app"
+  binary "#{appdir}/Layout.app/Contents/MacOS/layoutctl"
 
   zap trash: "~/Library/Application Support/Layout"
 end
