@@ -1,6 +1,6 @@
 cask "layout" do
-  version "0.4.15"
-  sha256 "a63947d93091b648c432357c17380f93bebdbb71e322b166d813dd1142d0852c"
+  version "0.4.16"
+  sha256 "1786084162e7aa2695b836443e6df37a74d963af44aba12c82bf3b86e4050f3c"
 
   url "https://download.getlayout.app/Layout-#{version}.zip"
   name "Layout"
