@@ -7,7 +7,7 @@ cask "keyhop" do
   desc "Click controls and select text with your keyboard"
   homepage "https://github.com/EQuimper/KeyHop"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "KeyHop.app"
 end
