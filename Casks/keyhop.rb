@@ -1,6 +1,6 @@
 cask "keyhop" do
-  version "1.0.0"
-  sha256 "18062ae4f3cee3cc6b2edcdc1d6607d43f10246f04dffe57fe843245aa22bcb0"
+  version "1.0.1"
+  sha256 "82ab1ade877da35da99ebdc2fe23942b87617a5b83d04f1da6baa71b1692aaad"
 
   url "https://github.com/EQuimper/KeyHop/releases/download/v#{version}/KeyHop-#{version}.zip"
   name "KeyHop"
