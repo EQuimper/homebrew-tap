@@ -1,6 +1,6 @@
 cask "budswitch" do
-  version "1.0.0"
-  sha256 "77e40ce9f95b0d459fdb7380cc387f96a9d79e742b44c549aab788d3713ddb1f"
+  version "1.0.1"
+  sha256 "1ea47a0226139d89aa91fe776a35a41d3d85fbb070709153830d80af8c7b8d2e"
 
   url "https://github.com/EQuimper/BudSwitch/releases/download/v#{version}/BudSwitch-#{version}.zip"
   name "BudSwitch"
