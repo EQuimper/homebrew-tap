@@ -1,15 +1,15 @@
 class Cmw < Formula
   desc "Fast, disk-cheap git worktrees for humans and AI agents: copy-on-write deps, .env that follows, safe cleanup, JSON output, no prompts."
   homepage "https://github.com/EQuimper/cleanmyworktree"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.1.3/cmw-aarch64-apple-darwin.tar.xz"
-      sha256 "102897f4de5bc2e863468d13e79236a193360387e97ba0441c675fafb96c9831"
+      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.1.4/cmw-aarch64-apple-darwin.tar.xz"
+      sha256 "a37f1f88a79887f6c2a1b631e2ee1a4bb285f379ded7ef64bdfce895b7043cd2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.1.3/cmw-x86_64-apple-darwin.tar.xz"
-      sha256 "c1b9c996c8033684c4e67e0bc717cb3c5db247cabfb8160788d7a4bcabfaedb4"
+      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.1.4/cmw-x86_64-apple-darwin.tar.xz"
+      sha256 "dfcea2f6fb2766d7472f8b9f872d1713cf8a8893ddeb11ebb88b0e12aa4f1fc1"
     end
   end
   license "MIT"
