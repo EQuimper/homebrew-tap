@@ -1,22 +1,38 @@
 class Cmw < Formula
   desc "Fast, disk-cheap git worktrees for humans and AI agents: copy-on-write deps, .env that follows, safe cleanup, JSON output, no prompts."
   homepage "https://github.com/EQuimper/cleanmyworktree"
-  version "0.1.5"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.1.5/cmw-aarch64-apple-darwin.tar.xz"
-      sha256 "25224319c57f9ef45c19b346a3fd548eb8cf81e06bedbfd6ece9f1ad3818c125"
+      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.2.0/cmw-aarch64-apple-darwin.tar.xz"
+      sha256 "e54952baededf361547fff3e6ff6276e8619ac44e5a9c854ea529d97ac32444e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.1.5/cmw-x86_64-apple-darwin.tar.xz"
-      sha256 "6693a28016a0008324d9d8eae83de725b51b915a6233025e809cca73e742af24"
+      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.2.0/cmw-x86_64-apple-darwin.tar.xz"
+      sha256 "b27bf169e4f9f74318f60fcd1693faff404bbdfdb103d9021ecb25ce21b9470f"
+    end
+  end
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.2.0/cmw-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "acf338e70bf382b2edf5d748b6da9910208ea3b1dc024ef2755f73964b5903ee"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/EQuimper/cleanmyworktree/releases/download/v0.2.0/cmw-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "0c13053e09d7788da68867036546dd712425befa91dc98f1950b265d6867d55d"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin": {},
-    "x86_64-apple-darwin":  {},
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static":  {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
   }.freeze
 
   def target_triple
@@ -39,6 +55,12 @@ class Cmw < Formula
       bin.install "cmw"
     end
     if OS.mac? && Hardware::CPU.intel?
+      bin.install "cmw"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "cmw"
+    end
+    if OS.linux? && Hardware::CPU.intel?
       bin.install "cmw"
     end
 
